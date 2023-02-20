@@ -10,12 +10,12 @@ const handleApiCall = (req, res) => {
             }
         ]
       });
-      
+    
       const requestOptions = {
           method: 'POST',
           headers: {
               'Accept': 'application/json',
-              'Authorization': 'Key ' + 'b9992b295141427a94df83963d2a7b06' //API Key
+              'Authorization': 'Key ' + process.env.CLARIFAI_API_KEY
           },
           body: raw
       };
